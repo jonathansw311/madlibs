@@ -1,0 +1,20 @@
+
+{% extends 'base.html' %}
+{% block title%}Home{% endblock %}
+{% block page_name%}Home{% endblock %}
+
+   {% block content%}
+   <div class="inputBox">
+   <form action="/story">
+    {% for val in keys %}
+        
+        <label for={{val}}>{{val}}: </label>
+        <input type="text" name={{val}} class="inputs">
+        <br>
+        <br>
+        
+    {% endfor %}
+    <button class="submitButton">Submit!!</button>
+    </form>
+    <div>
+    {% endblock %}

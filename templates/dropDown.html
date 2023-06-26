@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title%}Story Selector{% endblock %}
+{% block page_name%}drop{% endblock %}
+
+   {% block content%}
+
+   <form action="/homeTwo" id="StoryList">
+   
+  <br>
+
+
+   <h3>drop down goes here</h3>
+   <label for="StoryList">Choose a story:</label>
+   <select id="StoryList"  form="StoryList" name="StoryList">
+   {% for val in storyList %}
+   <option value="{{val}}">{{val}}</option>
+   {%endfor%}
+   </select>
+   <button>Submit</button>
+   </form>
+   {%endblock%}
